@@ -178,11 +178,6 @@ body {
     width: 600px;
     gap: 30px;
 }
-@media only screen and (max-width: 320px) {
-    .quote_alignment {
-        width: 300px;
-    }
-}
 .quote_alignment p {
     font-size: 24px;
 }
@@ -232,4 +227,49 @@ body {
 }
 .footer div h2 {
     font-size: 32px;
+}
+.hamburger_menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger_line {
+    width: 32px;
+    height: 4px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+@media only screen and (max-width: 320px) {
+    .quote_alignment {
+        width: 300px;
+        padding: 5px;
+    }
+    .navigation_bar_menu {
+        display: none;
+    }
+    .home_text {
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .home_page {
+        gap: 0;
+        padding: 10px; 
+        height: 400px;
+    }
+    .hamburger_menu {
+        display: inline-block;
+    }
 }
