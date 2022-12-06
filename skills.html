@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/26970c92cd.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
                     Webbsy.
                 </a>
             </div>
-            <div class="hamburger_menu">
+            <div class="hamburger_menu" onclick="hamburgerMenuToggle()">
                 <div class="hamburger_line"></div>
                 <div class="hamburger_line"></div>
                 <div class="hamburger_line"></div>
@@ -35,6 +36,15 @@
             </div>
         </nav>
     </header>
+    <div class="hamburger_menu_links_wrapper">
+        <ul class="hamburger_menu_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href='about.html'>About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
     <div id="background-gradient"><h1>My skills</h1></div>
     <section class="skills_page">
         <div> 
@@ -42,7 +52,7 @@
         </div>
         <div class="skills_text_img">
             <div class="skills_info">
-                <div class="skills skill_1">
+                <div class="skills skill_1" onclick="skillToggle(event)">
                     <div class="skill_name skill_name_1">
                         Python
                     </div>
@@ -52,7 +62,10 @@
                     <div class="skills_bar skills_bar_1">
                     </div>
                 </div>
-                <div class="skills skill_2">
+                <div class="skills_expanded skill_1_expanded"><h2>Python</h2><p>I have been studying the Python language for quite some time now, from the beginning of high school through tutorials
+                    in youtube to now certified courses from Gjirafa. I have held multiple Python courses offered by RIT itself and also many outside sources too.
+                </p></div>
+                <div class="skills skill_2" onclick="skillToggle(event)">
                     <div class="skill_name skill_name_2">
                         SQL
                     </div>
@@ -62,7 +75,9 @@
                     <div class="skills_bar skills_bar_2">
                     </div>
                 </div>
-                <div class="skills skill_3">
+                <div class="skills_expanded skill_2_expanded"><h2>SQL</h2><p>I have been studying SQL for the past 6 months. In this duration we were tasked to build and maintain logical links in a database
+                    and between tables, query information based on any parameter given, in any order wished to be received and much more. </p></div>
+                <div class="skills skill_3" onclick="skillToggle(event)">
                     <div class="skill_name skill_name_3">
                         HTML
                     </div>
@@ -72,7 +87,10 @@
                     <div class="skills_bar skills_bar_3">
                     </div>
                 </div>
-                <div class="skills skill_4">
+                <div class="skills_expanded skill_3_expanded"><h2>HTML</h2><p>I have been studying and perfecting HTML since high school. Back then, in the technology subject we were taught basic HTML,
+                    so, paragraphs, headers, lists and such. Now I have learned all about semantic HTML, advanced tables and connections between elements, DOM manipulation with JavaScript etc.
+                </p></div>
+                <div class="skills skill_4" onclick="skillToggle(event)">
                     <div class="skill_name skill_name_4">
                         CSS
                     </div>
@@ -82,7 +100,10 @@
                     <div class="skills_bar skills_bar_4">
                     </div>
                 </div>
-                <div class="skills skill_5">
+                <div class="skills_expanded skill_4_expanded"><h2>CSS</h2><p>When I first started mingling with CSS, it proved very difficult. After getting used to the relationships between children and 
+                    parent divs and other elements, everything became clear. Now I am proficient in all aspects of CSS, whether it be simple heights widths and paddings, or transitions and browser-specific work!
+                </p></div>
+                <div class="skills skill_5" onclick="skillToggle(event)">
                     <div class="skill_name skill_name_5">
                         C#
                     </div>
@@ -92,6 +113,9 @@
                     <div class="skills_bar skills_bar_5">
                     </div>
                 </div>
+                <div class="skills_expanded skill_5_expanded"><h2>C#</h2><p>I have been using C# extensively these past 4 months. I have been doing server/back-end work with it managing repositories,
+                    communicating with databases and relating information fetched to the screen through front-end. It truly is an amazing language!
+                </p></div>
             </div>
             <div class="skills_img_div">
                 <img src="professional_skills.webp" class="skills_img">
@@ -102,46 +126,58 @@
         </div>
         <div class="skills_text_img">
             <div class="skills_info">
-                <div class="skills skill_6">
-                    <div class="skill_name skill_name_1">
+                <div class="skills skill_6" onclick="skillToggle(event)">
+                    <div class="skill_name skill_name_6">
                         Empathy
                     </div>
-                    <div class='skill_percentage skill_percentage_1'>
+                    <div class='skill_percentage skill_percentage_6'>
                         90%
                     </div>
                     <div class="skills_bar skills_bar_6">
                     </div>
                 </div>
-                <div class="skills skill_7">
+                <div class="skills_expanded skill_6_expanded"><h2>Empathy</h2><p>Empathy has always been a strong suit of mine since I was a little child. I have always been taught to put myself
+                    in another's shoes before judging and reaching conclusions. Because of this many friends rely on me as an emotional outlet and my conflict-resolution skillls have improved vastly!
+                </p></div>
+                <div class="skills skill_7" onclick="skillToggle(event)">
                     <div class="skill_name skill_name_7">
                         Communication
                     </div>
-                    <div class='skill_percentage skill_percentage_2'>
+                    <div class='skill_percentage skill_percentage_7'>
                         80%
                     </div>
-                    <div class="skills_bar skills_bar_8">
+                    <div class="skills_bar skills_bar_7">
                     </div>
                 </div>
-                <div class="skills skill_8">
-                    <div class="skill_name skill_name_3">
+                <div class="skills_expanded skill_7_expanded"><h2>Communication</h2><p>I have learned through my endeavors so far in life that communication brings out the best in a person. For every single situation
+                    communication is the key to mutual understanding and appreciation of expression!
+                </p></div>
+                <div class="skills skill_8" onclick="skillToggle(event)">
+                    <div class="skill_name skill_name_8">
                         Public Speaking
                     </div>
-                    <div class='skill_percentage skill_percentage_3'>
+                    <div class='skill_percentage skill_percentage_8'>
                         80%
                     </div>
                     <div class="skills_bar skills_bar_8">
                     </div>
                 </div>
-                <div class="skills skill_9">
-                    <div class="skill_name skill_name_4">
+                <div class="skills_expanded skill_8_expanded"><h2>Public Speaking</h2><p>Public Speaking is an extremely important skill to have, a skill that i have acquired through much of trial and error.
+                    Speaking in presentations and class, and different gatherings speaking at important events has definitely improved this skill.
+                </p></div>
+                <div class="skills skill_9" onclick="skillToggle(event)">
+                    <div class="skill_name skill_name_9">
                         Integrity
                     </div>
-                    <div class='skill_percentage skill_percentage_4'>
+                    <div class='skill_percentage skill_percentage_9'>
                         70%
                     </div>
                     <div class="skills_bar skills_bar_9">
                     </div>
                 </div>
+                <div class="skills_expanded skill_9_expanded"><h2>Integrity</h2><p>Integrity is by far the hardest skill to acquire. Presenting yourself in a charming manner, while also maintaining a stoic expression is 
+                    extremely difficult but unfortunately is necessary for leaders to bloom!
+                </p></div>
             </div>
             <div class="skills_img_div">
                 <img src="soft_skills.jpg" class="skills_img">

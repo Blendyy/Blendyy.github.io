@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/26970c92cd.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -19,7 +20,7 @@
                     Webbsy.
                 </a>
             </div>
-            <div class="hamburger_menu">
+            <div class="hamburger_menu" onclick="hamburgerMenuToggle()">
                 <div class="hamburger_line"></div>
                 <div class="hamburger_line"></div>
                 <div class="hamburger_line"></div>
@@ -35,6 +36,15 @@
             </div>
         </nav>
     </header>
+    <div class="hamburger_menu_links_wrapper">
+        <ul class="hamburger_menu_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href='about.html'>About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
     <section class='contact_page' id="contact_page">
         <div>
             <h2 class="section_title">Contact</h2>

@@ -135,16 +135,26 @@ body {
     transition: 0.4s;
     border-radius: 4px;
 }
-.change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+.hamburger_menu_links_wrapper {
+    display: none;
 }
-  
-.change .bar2 {
-    opacity: 0;
+.hamburger_menu_links{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    background-color: #3b3c36;
+    color: white;
 }
-
-.change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+.hamburger_menu_links li a {
+    text-decoration: none;
+}
+.hamburger_menu_links li{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #131313;
 }
 @media only screen and (max-width: 320px) {
     .navigation_bar_menu {

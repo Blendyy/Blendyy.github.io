@@ -113,6 +113,7 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    cursor: pointer;
     font-weight: 600;
     padding: 16px 16px;
     margin-bottom: 32px;
@@ -127,6 +128,14 @@ body {
     height: 4px;
     border-radius: 8px;
     z-index: -10;
+}
+.skills_expanded {
+    display: none;
+    height: 120px;
+    padding: 16px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 25px rgb(14 36 49 / 15%);
+    margin-bottom: 32px;
 }
 .skills_bar_1 {
     max-width: 90%;
@@ -187,16 +196,26 @@ body {
     transition: 0.4s;
     border-radius: 4px;
 }
-.change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+.hamburger_menu_links_wrapper {
+    display: none;
 }
-  
-.change .bar2 {
-    opacity: 0;
+.hamburger_menu_links{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    background-color: #3b3c36;
+    color: white;
 }
-
-.change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+.hamburger_menu_links li a {
+    text-decoration: none;
+}
+.hamburger_menu_links li{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #131313;
 }
 
 @media only screen and (max-width: 768px) {
